@@ -41,9 +41,29 @@ formInput.addEventListener('submit', (event) => {
     const thirdNumber=parseInt(thirdNumberImput.value);
     const fourthNumber=parseInt(fourthNumberImput.value);
     const fifthNumber=parseInt(fifthtNumberImput.value);
+    
     const userNumbers=[];
     userNumbers.push(firstNumber,secondNumber,thirdNumber, fourthNumber, fifthNumber);
     //console.log(userNumbers);
+    firstNumberImput.value= "";
+    secondtNumberImput.value= "";
+    thirdNumberImput.value= "";
+    fourthNumberImput.value= "";
+    fifthtNumberImput.value= "";
+    
+    const result =[];
+    let numbersCount =0;
+    for(let i = 0; i < userNumbers.length ; i++){
+        currentNumber = userNumbers[i];
+        
+        if(randomNumbers.includes(userNumbers[i])){
+         result.push(userNumbers[i]);
+         numbersCount++
+         //console.log(result);
+        }
+    }
+    resultOutput.innerHTML="hai indovinato" + " " + numbersCount + " numeri"+ "("+ result.join("-") + ")";
+
 })
     
 
