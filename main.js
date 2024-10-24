@@ -33,7 +33,19 @@ setTimeout(()=>{
         
 },30000);
  
-
+formInput.addEventListener('submit', (event) => {
+    event.preventDefault();
+    
+    const firstNumber=parseInt(firstNumberImput.value);
+    const secondNumber=parseInt(secondtNumberImput.value);
+    const thirdNumber=parseInt(thirdNumberImput.value);
+    const fourthNumber=parseInt(fourthNumberImput.value);
+    const fifthNumber=parseInt(fifthtNumberImput.value);
+    const userNumbers=[];
+    userNumbers.push(firstNumber,secondNumber,thirdNumber, fourthNumber, fifthNumber);
+    //console.log(userNumbers);
+})
+    
 
 
 
